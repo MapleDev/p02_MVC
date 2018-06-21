@@ -24,11 +24,11 @@ public class HeroListServlet extends HttpServlet {
 
         // 从session中取出userName，如果是空，就表示用户没有登录，或者登录已经超过了30分钟。
         // 客户端跳转到login.html，让用户重新登陆
-        String name = (String) req.getSession().getAttribute("name");
-        if (!StringUtil.isValidate(name)) {
-            resp.sendRedirect("/login.html");
-            return;
-        }
+//        String name = (String) req.getSession().getAttribute("name");
+//        if (!StringUtil.isValidate(name)) {
+//            resp.sendRedirect("/login.html");
+//            return;
+//        }
         //-------
 
 

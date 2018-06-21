@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app>
 
-    <servlet>
-        <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>com.xznn.servlet.HelloServlet</servlet-class>
-        <load-on-startup>10</load-on-startup>
-    </servlet>
+    <filter>
+        <filter-name>FirstFilter</filter-name>
+        <filter-class>com.xznn.filter.FirstFilter</filter-class>
+    </filter>
 
-    <servlet-mapping>
-        <servlet-name>HelloServlet</servlet-name>
-        <url-pattern>/hello</url-pattern>
-    </servlet-mapping>
+    <filter-mapping>
+        <filter-name>FirstFilter</filter-name>
+        <!--<url-pattern>*.jsp</url-pattern>-->
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.xznn.filter.EncodingFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>com.xznn.filter.AuthFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
 
     <servlet>
         <servlet-name>LoginServlet</servlet-name>

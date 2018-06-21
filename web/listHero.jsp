@@ -2,6 +2,7 @@
          pageEncoding="UTF-8" import="java.util.*" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
+
 <script src="http://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
 <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
 <script src="http://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
@@ -9,8 +10,8 @@
     $(function () {
         $("a").addClass("btn btn-default btn-xs");
     });
-
 </script>
+
 <html>
 <head>
     <title></title>
@@ -43,6 +44,7 @@
             <a href="?start=${pre}">[上一页]</a>
             <a href="?start=${next}">[下一页]</a>
             <a href="?start=${last}">[末页]</a>
+            <a href="/addHero.html">add</a>
         </td>
     </tr>
 </table>

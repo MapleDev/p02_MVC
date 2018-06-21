@@ -13,7 +13,7 @@ public class HeroAddServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");
+//        req.setCharacterEncoding("UTF-8");
 
         Hero hero = new Hero();
         hero.setName(req.getParameter("name"));
